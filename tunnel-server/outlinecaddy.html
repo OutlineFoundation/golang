@@ -1,8 +1,16 @@
 <html>
 
 <head>
-  <meta name="go-import" content="golang.getoutline.org/tunnel-server/outlinecaddy git https://github.com/Jigsaw-Code/outline-ss-server">
-  <meta name="go-source" content="golang.getoutline.org/tunnel-server/outlinecaddy _ https://github.com/Jigsaw-Code/outline-ss-server/tree/outlinecaddy{/dir} https://github.com/Jigsaw-Code/outline-ss-server/blob/outlinecaddy{/dir}/{file}#L{line}">
+  <!-- 
+    IMPORTANT: The go-import and go-source tags must point to the module ROOT, not the submodule path.
+
+    When the Go tool encounters a submodule, it needs the context of the repository root to correctly 
+    locate the nested go.mod file. Pointing these tags directly to the submodule path will cause the 
+    Go tool (and Proxy) to incorrectly attempt to treat the submodule path as the repository root, 
+    resulting in `module found, but does not contain package` error.
+  -->
+  <meta name="go-import" content="golang.getoutline.org/tunnel-server git https://github.com/Jigsaw-Code/outline-ss-server">
+  <meta name="go-source" content="golang.getoutline.org/tunnel-server _ https://github.com/Jigsaw-Code/outline-ss-server/tree{/dir} https://github.com/Jigsaw-Code/outline-ss-server/blob{/dir}/{file}#L{line}">
 </head>
 
 <body>
